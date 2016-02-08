@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search Tweets</title>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+	<script type="text/javascript" src="/javascripts/jquery.js"></script>
+	<script type="text/javascript" src="/javascripts/twitter.js"></script>
+</head>
+<body>
+	<span id="searchForm" class="table search-header">
+		<span class="search-form">
+			<input type="text" id="searchFor" placeholder="Search Text"/>
+			<span id="loadSearch">Search</span>
+			&nbsp;<span id="loadUserTimeLine">Load User TimeLine</span>
+			&nbsp;<span id="loadHomeTimeLine">Load Home TimeLine</span>
+		</span>
+		<span class="screen-name">
+			<strong id="loggedInAs" ><%= ScreenName %></strong>
+		</span>
+	</span>
+	<div id="tweetsText" class="table content"></div>
+</body>
+</html>
