@@ -6,7 +6,7 @@ var config = (function() {
 	var accessTokenSecret = "XXX"; //Your twitter app access token secret
 	var request_token = 'https://api.twitter.com/oauth/request_token'; //twitter request token URL
   	var access_token = 'https://api.twitter.com/oauth/access_token'; //twitter access token URL
-  	var callbackUrl = "http://localhost:3000/users/access/"; //twitter app callback URL
+  	var callbackUrl = "XXX"; //twitter app callback URL
   	var baseUrl = 'https://api.twitter.com/1.1/'; //twitter base URL
   	var searchPath = 'search/tweets.json?q='; //search partial URL
   	var externalAuthUrl = "https://api.twitter.com/oauth/authenticate?oauth_token="; //redirect user to authenticate to twitter
