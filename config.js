@@ -1,9 +1,9 @@
 var OAuth = require('oauth').OAuth;
 var config = (function() {
-	var consumerKey = "hdv4qnKr4YMdnB6SyQ4EleqQP"; //Your twitter app consumer key
-	var consumerSecret = "TgIQ4CI0UWZSMfYGS2jWCeLU0xTs2G610wkpjZjFo6EzASWJCG"; //Your twitter app consumer secret key
-	var accessToken = "436312192-I4Fcg3vgxMi7dq2vIPbiHsRX8DlNIWRcaGeiqi3A"; //Your twitter app access token
-	var accessTokenSecret = "wiUiwlE5M53pbzy3EapNRcJwGwJHaRtsYYEtxE7SWSG5U"; //Your twitter app access token secret
+	var consumerKey = "XXX"; //Your twitter app consumer key
+	var consumerSecret = "XXX"; //Your twitter app consumer secret key
+	var accessToken = "XXX"; //Your twitter app access token
+	var accessTokenSecret = "XXX"; //Your twitter app access token secret
 	var request_token = 'https://api.twitter.com/oauth/request_token'; //twitter request token URL
   	var access_token = 'https://api.twitter.com/oauth/access_token'; //twitter access token URL
   	var callbackUrl = "http://localhost:3000/users/access/"; //twitter app callback URL
