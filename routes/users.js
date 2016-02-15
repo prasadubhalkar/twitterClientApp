@@ -9,8 +9,8 @@ var router = express.Router();
  */
 router.get('/search/:text', function(req, res, next) {
     var query = encodeURIComponent(req.params.text);
-	var url = req.config.getBaseurl() + req.config.getPartialSearchUrl() + query;
-	
+	var url = req.config.getBaseurl() + req.config.getPartialSearchUrl() + query + "&count=100";
+    
     req.config.getOAuth().get(url,req.config.getAccessToken(),req.config.getAccessTokenSecret(),
         function(err,body,response){
             if(!err && response.statusCode === 200){
@@ -40,13 +40,14 @@ router.get('/success/', function(req, res, next) {
  * @return {undefined}
  */
 router.get('/success/usertimeline/', function(req, res, next) {
-    var timeLineUrl = req.config.getBaseurl() + req.config.getUserTimeLineUrl() + req.config.getCurrentScreenName() + "&count=20";
+    var timeLineUrl = req.config.getBaseurl() + req.config.getUserTimeLineUrl() + req.config.getCurrentScreenName() + "&count=100";
 
     req.config.getOAuth().get(timeLineUrl,req.config.getAccessToken(),req.config.getAccessTokenSecret(),
         function(err,body,response){
             if(!err && response.statusCode === 200){
                 res.send(body);
             } else {
+                console.log(err);
                 res.send(err);
             }
         }
@@ -60,7 +61,7 @@ router.get('/success/usertimeline/', function(req, res, next) {
  * @return {undefined}
  */
 router.get('/success/hometimeline/', function(req, res, next) {
-    var timeLineUrl = req.config.getBaseurl() + req.config.getHomeTimeLineUrl() + "20";
+    var timeLineUrl = req.config.getBaseurl() + req.config.getHomeTimeLineUrl() + "100";
 
     req.config.getOAuth().get(timeLineUrl,req.config.getAccessToken(),req.config.getAccessTokenSecret(),function(err,body,response){
         if(!err && response.statusCode === 200){

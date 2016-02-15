@@ -12,6 +12,16 @@
   border: 1px solid black;
 }
 
+.cell {
+  display: table-cell;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.odd {
+  background-color: #f6f6f6;
+}
+
 .centered-cell {
   width:30px;
   height: 20px;
